@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolas Gimenez Alcalde">
+    <meta name="description" content="Pesquisa sobre API's e integrações">
+    <meta name="keywords" content="Portfólio, API's, integrações, introdução, tipos, ferramentas, conclusão, referências">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Api's e Integrações</title>
+</head>
+<body>
+    <header class="header-1">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#home" class="nav-logo">Api's e Integrações</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#texto-um" class="nav-link active">Introdução</a></li>
+                    <li class="nav-item"><a href="#texto-dois" class="nav-link">Tipos de API's</a></li>
+                    <li class="nav-item"><a href="#texto-tres" class="nav-link">Ferramentas</a></li>
+                    <li class="nav-item"><a href="#texto-quatro" class="nav-link">Exemplos na Prática</a></li>
+                    <li class="nav-item"><a href="#texto-cinco" class="nav-link">Conclusão</a></li>
+                    <li class="nav-item"><a href="#texto-seis" class="nav-link">Referências</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="section-um">
+            <div id="image-um">
+                <img src="images/garcon.jpg" alt="introdução">
+            </div>
+            <div id="texto-um">
+                <h1>Introdução</h1>
+                <p>API é a sigla em inglês para Application Programming Interface, ou interface de programação de aplicações. As interfaces de programação de aplicativos (APIs) são conjuntos de ferramentas, definições e protocolos para a criação de softwares. Elas conectam soluções e serviços, sem a necessidade de o usuário ou desenvolvedor saber como esses elementos foram implementados internamente.<br>
+                Um exemplo prático está nos serviços de previsão do tempo. O sistema de software do instituto meteorológico contém dados meteorológicos diários, e o aplicativo de previsão do tempo em um celular “conversa” com esse sistema por meio de APIs, exibindo atualizações em tempo real.<br>
+                Além disso, as APIs fornecem maior segurança de dados, pois permitem bloqueio de acessos indevidos por meio da seleção de informações e controle de permissões. Isso reduz o risco de sobrecarga e garante maior confiabilidade nos sistemas.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-dois">
+            <div id ="texto-dois">
+                <h1>Tipos de Api's</h1>
+                <p>
+                    As APIs podem funcionar de diferentes maneiras, dependendo do protocolo e da arquitetura em que foram criadas. Os principais tipos são: <br>
+                        APIs SOAP: utilizam o Simple Object Access Protocol. Cliente e servidor trocam mensagens por meio de XML. Eram bastante populares no passado, mas hoje possuem menor flexibilidade.<br>
+                        APIs RPC: conhecidas como Remote Procedure Calls, permitem que o cliente execute uma função no servidor e receba a resposta.<br>
+                        APIs WebSocket: usam objetos JSON para transmitir dados em tempo real. Permitem comunicação bidirecional entre cliente e servidor, sendo mais eficientes que APIs REST em certos cenários.<br>
+                        APIs REST: atualmente as mais populares. O cliente envia solicitações HTTP e o servidor retorna dados geralmente em formato JSON. São flexíveis e amplamente utilizadas na web.<br>
+                </p>
+            </div>
+            <div id="image-dois">
+                <img src="images/soap.jpg" alt="tipos">
+            </div>
+        </section>
+       
+        <section class="section-tres">
+            <div id= "image-tres">
+                <img src="images/ferramentas.jpg" alt = "ferramentas">
+            </div>
+            <div id= "texto-tres">
+                <h1>Ferramentas</h1>
+                <p>
+                    As APIs possibilitam integração rápida de sistemas, otimização de processos e aumento da segurança. Algumas ferramentas importantes para testes e integrações são:<br>
+                        SoapUI (código aberto): ferramenta para testes de APIs SOAP e REST, com suporte a cenários complexos baseados em WSDL.<br>
+                        Apache JMeter (código aberto): ferramenta de teste de carga e desempenho, com suporte a múltiplos protocolos, incluindo APIs REST e SOAP, permitindo simular diversos usuários simultâneos.<br>
+                        k6 (código aberto): ferramenta moderna para teste de carga e performance de APIs REST, com scripts escritos em JavaScript e fácil integração em pipelines de CI/CD.<br>
+                        Gatling (código aberto): framework de teste de desempenho para APIs, baseado em Scala, que gera relatórios detalhados e permite testes de alto volume de requisições.<br>
+                        Locust (código aberto): ferramenta de teste de carga em Python, permitindo simular milhares de usuários simultâneos com scripts simples e escalabilidade distribuída.<br>
+                        Essas ferramentas auxiliam no desenvolvimento, validação e manutenção de sistemas baseados em API, garantindo desempenho, confiabilidade e segurança.<br>
+                </p>
+            </div>
+        </section>
+
+        <section class="section-quatro">
+            <div id ="texto-quatro">
+                <h1>Exemplos na Prática</h1>
+                <p>
+                    Diversos aplicativos e serviços utilizam APIs para oferecer funcionalidades:<br>
+                        Google Maps: integra rotas, geolocalização e mapas em tempo real em diversos aplicativos de transporte, como Uber e 99.<br>
+                        Spotify: oferece APIs para integração de playlists, músicas e recomendações personalizadas em outros serviços.<br>
+                        Instagram e Facebook: permitem integração de publicações, login social e coleta de dados analíticos por meio de APIs.<br>
+                        WhatsApp Business API: possibilita o envio automatizado de mensagens e integração de atendimento ao cliente com sistemas empresariais.<br>
+                        OpenWeather: fornece informações climáticas em tempo real para aplicativos de previsão do tempo e dispositivos inteligentes.<br>
+                        Esses exemplos mostram como as APIs estão presentes no dia a dia, conectando diferentes sistemas e criando soluções integradas.<br>
+                </p>
+            </div>
+
+            <div id="image-ferramentas">
+                <div>
+                    <img src="images/face.jpg" alt="exemplo" id="image-face">
+                    <img src="images/verdade.jpg" alt="exemplo" id="image-insta">
+                </div>
+                <div>
+                    <img src="images/spotify.jpg" alt="exemplo" id="image-spot">
+                    <img src="images/wpp.jpg" alt="exemplo" id="image-wpp">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-cinco">
+            <div id="texto-cinco">
+                <h1>Conclusão</h1>
+                <p>
+                    As APIs são fundamentais no cenário atual da computação, pois permitem a integração entre sistemas, a automação de processos e o acesso seguro a informações. Sua versatilidade se manifesta em diferentes tipos, como REST e WebSocket, e sua aplicação prática é visível em exemplos como Google Maps, Spotify, WhatsApp e OpenWeather.<br>
+                        Além disso, ferramentas como SoapUI, JMeter e Rest-Assured fortalecem o ciclo de desenvolvimento, garantindo qualidade e desempenho das integrações. Dessa forma, compreender e utilizar APIs não é apenas uma habilidade técnica, mas uma exigência essencial para qualquer desenvolvedor que busca soluções escaláveis e modernas no mercado de tecnologia.<br>
+                </p>
+            </div>
+        </section>
+
+        <section class="section-seis">
+            <div id="texto-seis">
+                <h1>Referências</h1>
+                <p>
+                    BROWSERSTACK. Open-source API testing tools. Disponível em: <a href="https://www.browserstack.com/guide/open-source-api-testing-tools">https://www.browserstack.com/guide/open-source-api-testing-tools</a>. Acesso em: 18 ago. 2025.<br><br>
+                        APIDOG. Best API integration tools. Disponível em: <a href="https://apidog.com/pt/blog/best-api-integration-tools-pt/">https://apidog.com/pt/blog/best-api-integration-tools-pt/</a>. Acesso em: 18 ago. 2025.<br><br>
+                        RED HAT. O que são APIs (Application Programming Interfaces). Disponível em: <a href="https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces">https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces</a>. Acesso em: 18 ago. 2025.<br><br>
+                        ALURA. O que é API? Disponível em: <a href="https://www.alura.com.br/artigos/api?srsltid=AfmBOorutPH1CAo97WrOsiUtaHOUuRKbsNIJsgTOv1rbRbHbTJ_GfyqR">https://www.alura.com.br/artigos/api?srsltid=AfmBOorutPH1CAo97WrOsiUtaHOUuRKbsNIJsgTOv1rbRbHbTJ_GfyqR</a>. Acesso em: 18 ago. 2025.<br><br>
+                        AMAZON WEB SERVICES (AWS). O que é API? Disponível em: <a href="https://aws.amazon.com/pt/what-is/api/">https://aws.amazon.com/pt/what-is/api/</a>. Acesso em: 18 ago. 2025.<br><br>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="footer-title"> &nbsp; Feito por </p>
+        <p> &ensp; Nicolas Gimenez Alcalde</p>
+        <p> &emsp; RA: 0030482411027 </p>
+        <p><small>&copy; <sup>2025</sup> <sub></sub>
+                Todos os direitos reservados. </small></p>
+    </footer>
+</body>
+</html>
