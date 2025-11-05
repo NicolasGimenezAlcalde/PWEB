@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 12 - Objetos em JavaScript</title>
+</head>
+<body>
+  <button onclick="criarRetangulo()">Criar Retângulo</button>
+  <p id="resultadoRetangulo"></p>
+
+  <button onclick="criarContas()">Criar Contas</button>
+  <p id="resultadoConta"></p>
+
+  <script>
+
+    function Retangulo(base, altura) {
+      this.base = base;
+      this.altura = altura;
+      this.calcularArea = function() {
+        return this.base * this.altura;
+      };
+    }
+
+    function criarRetangulo() {
+      const base = parseFloat(prompt("Digite a base do retângulo:"));
+      const altura = parseFloat(prompt("Digite a altura do retângulo:"));
+      const ret = new Retangulo(base, altura);
+      document.getElementById("resultadoRetangulo").innerHTML =
+        `A área do retângulo é:${ret.calcularArea()}`;
+    }
+
+    class Conta {
+      constructor(nome, banco, numeroConta, saldo) {
+        this._nome = nome;
+        this._banco = banco;
+        this._numeroConta = numeroConta;
+        this._saldo = saldo;
+      }
+      get nome() { return this._nome; }
+      set nome(valor) { this._nome = valor; }
+
+      get banco() { return this._banco; }
+      set banco(valor) { this._banco = valor; }
+
+      get numeroConta() { return this._numeroConta; }
+      set numeroConta(valor) { this._numeroConta = valor; }
+
+      get saldo() { return this._saldo; }
+      set saldo(valor) { this._saldo = valor; }
+    }
+
+    class Corrente extends Conta {
+      constructor(nome, banco, numeroConta, saldo, saldoEspecial) {
+        super(nome, banco, numeroConta, saldo);
+        this._saldoEspecial = saldoEspecial;
+      }
+
+      get saldoEspecial() { return this._saldoEspecial; }
+      set saldoEspecial(valor) { this._saldoEspecial = valor; }
+    }
+
+    class Poupanca extends Conta {
+      constructor(nome, banco, numeroConta, saldo, juros, dataVencimento) {
+        super(nome, banco, numeroConta, saldo);
+        this._juros = juros;
+        this._dataVencimento = dataVencimento;
+      }
+
+      get juros() { return this._juros; }
+      set juros(valor) { this._juros = valor; }
+
+      get dataVencimento() { return this._dataVencimento; }
+      set dataVencimento(valor) { this._dataVencimento = valor; }
+    }
+
+    function criarContas() {
+
+      const nomeC = prompt("Nome do correntista (Conta Corrente):");
+      const bancoC = prompt("Banco:");
+      const numeroC = prompt("Número da conta:");
+      const saldoC = parseFloat(prompt("Saldo atual:"));
+      const saldoEsp = parseFloat(prompt("Saldo especial:"));
+      const contaCorrente = new Corrente(nomeC, bancoC, numeroC, saldoC, saldoEsp);
+
+      const nomeP = prompt("Nome do correntista (Conta Poupança):");
+      const bancoP = prompt("Banco:");
+      const numeroP = prompt("Número da conta:");
+      const saldoP = parseFloat(prompt("Saldo atual:"));
+      const juros = parseFloat(prompt("Taxa de juros:"));
+      const dataVenc = prompt("Data de vencimento:");
+      const contaPoupanca = new Poupanca(nomeP, bancoP, numeroP, saldoP, juros, dataVenc);
+
+      document.getElementById("resultadoConta").innerHTML = `
+        <h3>Conta Corrente:</h3>
+        Nome: ${contaCorrente.nome}<br>
+        Banco: ${contaCorrente.banco}<br>
+        Nº Conta: ${contaCorrente.numeroConta}<br>
+        Saldo: R$${contaCorrente.saldo.toFixed(2)}<br>
+        Saldo Especial: R$${contaCorrente.saldoEspecial.toFixed(2)}<br><br>
+
+        <h3>Conta Poupança:</h3>
+        Nome: ${contaPoupanca.nome}<br>
+        Banco: ${contaPoupanca.banco}<br>
+        Nº Conta: ${contaPoupanca.numeroConta}<br>
+        Saldo: R$${contaPoupanca.saldo.toFixed(2)}<br>
+        Juros: ${contaPoupanca.juros}%<br>
+        Data de Vencimento: ${contaPoupanca.dataVencimento}
+      `;
+    }
+  </script>
+</body>
+</html>
