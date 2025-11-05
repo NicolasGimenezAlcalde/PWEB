@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 13</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      cursor: pointer;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="titulo">Abra a Janela</h1>
+  <img id="janela" src="images/janela-fechada.jpg" alt="Janela Fechada">
+
+  <script>
+    const imgJanela = document.getElementById("janela");
+    const titulo = document.getElementById("titulo");
+    const imgFechada = "images/janela-fechada.jpg";
+    const imgAberta = "images/janela-aberta.jpg";
+    const imgQuebrada = "images/janela-quebrada.jpg";
+
+    imgJanela.addEventListener("mouseover", () => {
+      imgJanela.src = imgAberta;
+      titulo.textContent = "Janela Aberta";
+    });
+
+    imgJanela.addEventListener("mouseout", () => {
+      imgJanela.src = imgFechada;
+      titulo.textContent = "Janela Fechada";
+    });
+
+    imgJanela.addEventListener("click", () => {
+      imgJanela.src = imgQuebrada;
+      titulo.textContent = "Janela Quebrada";
+    });
+  </script>
+
+</body>
+</html>
